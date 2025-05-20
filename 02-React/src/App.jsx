@@ -1,10 +1,12 @@
 
 import './App.css'
+import Counter from './Components/Counter.jsx'
 
 function App() {
   return (
     <div className="container">
-      <h1>This is a React App</h1>
+      <h1>Counter App</h1>
+      <Counter/>
     </div>
   )
 }
