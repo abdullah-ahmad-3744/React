@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(27, 26, 26);
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  border: 3px solid yellow;
+  padding: 1rem;
+}
