@@ -1,12 +1,13 @@
-
-import './App.css'
+// App.jsx
+import React from 'react';
+import Card from './Components/Card.jsx';
 
 function App() {
   return (
-    <div className="container">
-      <h1>Day 3 of React</h1>
+    <div>
+      <Card />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

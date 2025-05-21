@@ -1,0 +1,23 @@
+/* components/LikeButton.css */
+.like-container {
+  margin-top: 10px;
+}
+
+.like-button,
+.liked-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.like-button {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.liked-button {
+  background-color: #1877f2; /* Facebook blue */
+  color: white;
+}
