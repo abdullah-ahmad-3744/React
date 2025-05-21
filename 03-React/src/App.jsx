@@ -1,10 +1,10 @@
-// App.jsx
+import './App.css'
 import React from 'react';
 import Card from './Components/Card.jsx';
 
 function App() {
   return (
-    <div>
+    <div className='container'>
       <Card />
     </div>
   );
