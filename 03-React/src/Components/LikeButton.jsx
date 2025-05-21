@@ -8,6 +8,7 @@ const LikeButton = () => {
 
   const handleLike = () => {
     setLiked(!liked);
+    setLikes(prev => liked ? likes - 1 : likes + 1);
   };
 
   return (
@@ -15,6 +16,7 @@ const LikeButton = () => {
       <button onClick={handleLike} className={liked ? 'liked-button' : 'like-button'}>
         {liked ? ' Liked' : ' Like'}
       </button>
+      <p>{likes} {likes === 1 ? 'Like' : 'Likes'}</p>
     </div>
   );
 };
