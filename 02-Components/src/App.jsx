@@ -2,6 +2,7 @@
 import './App.css'
 import FirstComponent from './components/FirstComponent'
 import SecondComponent from './components/SecondComponent'
+import ThirdComponent from './components/ThirdComponent'
 function App() {
 
   return (
@@ -9,6 +10,7 @@ function App() {
     <div className="main-container">
     <FirstComponent/>
     <SecondComponent />
+    <ThirdComponent />
     </div>
     </>
   )
