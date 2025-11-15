@@ -1,11 +1,12 @@
 
 import './App.css'
+import FirstComponent from './components/FirstComponent'
 function App() {
 
   return (
     <>
-    <div>
-      <h1> Day 2 of React </h1>
+    <div className="main-container">
+    <FirstComponent/>
     </div>
     </>
   )
