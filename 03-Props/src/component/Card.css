@@ -1,4 +1,4 @@
-.second-component {
+.card {
     height: 300px;
     width: 300px;
     display: flex;
@@ -6,11 +6,10 @@
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    background-color: yellow;
-    color: black;
+    background-color: blue;
     border-radius: 5px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.second-component p {
+.card p {
     margin-top: -2.7rem;
 }

@@ -1,14 +1,14 @@
-import "./FirstComponent.css"
+import "./Card.css"
 
-function FirstComponent (props) {
+function Card (props) {
     const title = props.title
     const description = props.description
     return (
-        <div className="first-component">
+        <div className="card">
             <h1>{title}</h1>
             <h3>Description</h3>
             <p>{description}</p>
         </div>
     )
 }
-export default FirstComponent
+export default Card
