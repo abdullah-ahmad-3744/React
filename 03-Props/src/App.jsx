@@ -5,7 +5,7 @@ function App() {
   return (
     <>
     <div className="Main-container">
-      <h1>Day 3 of React</h1>
+      <h1>Props in React</h1>
     </div>
     </>
   )
