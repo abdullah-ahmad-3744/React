@@ -1,11 +1,13 @@
 
 import './App.css'
+import Card from './components/Card'
 
 function App() {
 
   return (
     <div className="main-container">
-      <h1>States in React</h1>
+      <Card />
+
     </div>
   )
 }
