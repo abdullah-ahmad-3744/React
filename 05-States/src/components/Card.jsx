@@ -5,10 +5,9 @@ function Card () {
     const [heading, setHeading] = useState("Card")
 
 
-
-
     function HeadingHandler () {
-        setHeading("New Heading")
+       let user_input = prompt("Enter Card Heading")        
+        setHeading(user_input)
         console.log("Heading Updated");
         
     }
