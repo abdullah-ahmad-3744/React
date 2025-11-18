@@ -1,0 +1,28 @@
+.card-container {
+    height: 280px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    background-color: rgb(9, 102, 5);
+    padding: 1.3rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px;
+}
+.card-container h3 {
+    margin-left: -10.5rem;
+}
+.card-container p {
+    margin-top: -2rem;
+}
+button {
+    padding: 0.4rem 1.1rem 0.4rem 1.1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    color: #fff;
+    box-shadow: 1px 1px 5px;
+    cursor: pointer;
+}
