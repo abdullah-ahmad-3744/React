@@ -19,18 +19,17 @@ function Counter() {
     return (
         <div className="counter-container">
 
-            <div className="increment">
-                <button onClick={IncrementHandler}>Increment</button>
+            <div className="decrement">
+                <button onClick={DecrementHandler}>Decrement | </button>
             </div>
 
             <div className="result">
-                <p>{value}</p>
+                <p className="value">{value}</p>
             </div>
 
-            <div className="decrement">
-                <button onClick={DecrementHandler}>Decrement</button>
+            <div className="increment">
+                <button onClick={IncrementHandler}> | Increment</button>
             </div>
-
         </div>
     )
 }
