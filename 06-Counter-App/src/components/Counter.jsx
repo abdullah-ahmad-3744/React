@@ -15,9 +15,14 @@ function Counter() {
         
     }
 
-
+    function ResetHandler () {
+        setValue(0)
+        console.log("Value is set to 0");
+        
+    }
     return (
-        <div className="counter-container">
+        <div>
+            <div className="counter-container">
 
             <div className="decrement">
                 <button onClick={DecrementHandler}>Decrement | </button>
@@ -29,6 +34,10 @@ function Counter() {
 
             <div className="increment">
                 <button onClick={IncrementHandler}> | Increment</button>
+            </div>
+        </div>
+        <div className="reset">
+                <button onClick={ResetHandler} className="reset">Reset</button>
             </div>
         </div>
     )

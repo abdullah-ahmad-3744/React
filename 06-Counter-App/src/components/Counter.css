@@ -9,10 +9,15 @@
     padding: 0rem 0.3rem 0rem 0.3rem;
 }
 button {
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    font-size: 1.3rem;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    font-size: 1.4rem;
     background-color: rgb(65, 65, 182);
     border-radius: 7px;
     border: none;
     cursor: pointer;
+    font-weight: 900;
+}
+.reset {
+    margin-top: 5px;
+    width: 100%;
 }
