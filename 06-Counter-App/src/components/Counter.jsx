@@ -4,11 +4,13 @@ function Counter() {
 
     const [value, setValue] = useState(0)
     function IncrementHandler () {
+        setValue(value+1)
         console.log("Increment Button Clicked");
         
     }
 
     function DecrementHandler() {
+        setValue(value-1)
         console.log("Decrement Button Clicked");
         
     }
