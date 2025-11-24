@@ -1,5 +1,6 @@
 import "./Card.css"
 import { useState } from "react"
+import NoCards from "./NoCards"
 function Card() {
 
     let data = [
@@ -111,13 +112,7 @@ function Card() {
     ]
 
     const [remainingCards, setRemainingCards] = useState(data)
-
-
-
     function NotInterestedHandler(currentId) {
-        console.log("The current ID = ", currentId);
-        console.log("Remaining Cards =  ", remainingCards);
-
         let filteredData = remainingCards.filter((remainingCard) => {
             if (remainingCard.id !== currentId) {
                 return remainingCard
@@ -125,21 +120,17 @@ function Card() {
         })
         setRemainingCards(filteredData)
     }
-
-
     function InterestedHandler(currentId) {
         let interestedCard = remainingCards.filter ( (card) => {
             if (currentId == card.id) {
                 return card                
             }
         })        
-        
-        console.log(interestedCard);
-        setRemainingCards(interestedCard)     
+                setRemainingCards(interestedCard)     
     }
-
     return (
         <>
+        {remainingCards.length == 0 ? <NoCards /> : " "}
             {remainingCards.map((card) => {
                 return (
                     <div className="card" key={card.id}>
