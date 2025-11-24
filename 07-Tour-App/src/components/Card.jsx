@@ -112,17 +112,23 @@ function Card() {
 
     const [remainingCards, setRemainingCards] = useState(data)
 
-    function NotInterestedHandler (currentId) {
-        console.log("The current ID = " , currentId);
-        console.log("Remaining Cards =  ",remainingCards);
 
-        let filteredData = remainingCards.filter ( (remainingCard) => {
+
+    function NotInterestedHandler(currentId) {
+        console.log("The current ID = ", currentId);
+        console.log("Remaining Cards =  ", remainingCards);
+
+        let filteredData = remainingCards.filter((remainingCard) => {
             if (remainingCard.id !== currentId) {
                 return remainingCard
             }
-            
         })
-        setRemainingCards( filteredData)
+        setRemainingCards(filteredData)
+    }
+
+
+    function InterestedHandler() {
+        console.log("Interested");
         
     }
 
@@ -135,7 +141,10 @@ function Card() {
                         <h3>{card.price}</h3>
                         <h3>{card.city}</h3>
                         <p>{card.description}</p>
-                        <button onClick={() => NotInterestedHandler(card.id)}>Not Interested</button>
+                        <div className="buttons">
+                            <button onClick={() => NotInterestedHandler(card.id)}>Not Interested</button>
+                            <button onClick={InterestedHandler}>Interested</button>
+                        </div>
                     </div>
                 )
             })}
