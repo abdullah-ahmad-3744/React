@@ -127,9 +127,15 @@ function Card() {
     }
 
 
-    function InterestedHandler() {
-        console.log("Interested");
+    function InterestedHandler(currentId) {
+        let interestedCard = remainingCards.filter ( (card) => {
+            if (currentId == card.id) {
+                return card                
+            }
+        })        
         
+        console.log(interestedCard);
+        setRemainingCards(interestedCard)     
     }
 
     return (
@@ -143,7 +149,7 @@ function Card() {
                         <p>{card.description}</p>
                         <div className="buttons">
                             <button onClick={() => NotInterestedHandler(card.id)}  className="not-interested">Not Interested</button>
-                            <button onClick={InterestedHandler}  className="interested">Interested</button>
+                            <button onClick={() =>InterestedHandler(card.id)}  className="interested">Interested</button>
                         </div>
                     </div>
                 )
