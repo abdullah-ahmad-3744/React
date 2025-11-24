@@ -142,8 +142,8 @@ function Card() {
                         <h3>{card.city}</h3>
                         <p>{card.description}</p>
                         <div className="buttons">
-                            <button onClick={() => NotInterestedHandler(card.id)}>Not Interested</button>
-                            <button onClick={InterestedHandler}>Interested</button>
+                            <button onClick={() => NotInterestedHandler(card.id)}  className="not-interested">Not Interested</button>
+                            <button onClick={InterestedHandler}  className="interested">Interested</button>
                         </div>
                     </div>
                 )

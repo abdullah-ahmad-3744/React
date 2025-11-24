@@ -33,6 +33,11 @@
   margin-top: 10px;
   opacity: 0.9;
 }
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
 
 .card button {
   margin-top: auto;
@@ -40,10 +45,17 @@
   border: none;
   background-color: crimson;
   color: white;
-  border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
   transition:all ease 0.2s;
+}
+.not-interested {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.interested {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .card button:hover {
