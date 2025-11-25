@@ -86,7 +86,7 @@
 .buttons button{
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
-  color: #ffdfe0;
+  color: #ffff;
   padding: 0.55rem 0.85rem;
   border-radius: 10px;
   cursor: pointer;
@@ -94,10 +94,8 @@
 }
 
 .buttons button:hover{
-  background: rgb(151, 21, 21);
-  border-color: rgba(255,107,107,0.5);
+  background: red;
   color: #fff;
-  transform: translateY(-4px);
   box-shadow: 1px 1px 5px white;
 }
 
