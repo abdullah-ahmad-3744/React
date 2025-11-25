@@ -1,63 +1,166 @@
-.card {
-  height: 550px;
-  width: 310px;
-  background-color: #1a1a1a;
-  border: 2px solid #444;
-  padding: 15px;
-  border-radius: 7px;
+/* Card.css - card styles for each tour */
+.card{
   display: flex;
   flex-direction: column;
-  align-items:start ;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 0.85rem;
+  background: linear-gradient(180deg, var(--card-bg), rgba(11,17,28,0.8));
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 1rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 12px 30px rgba(3,8,20,0.6);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.1);
+/* Lift on hover */
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(2,8,32,0.7);
 }
 
-.card img {
+/* image */
+.card .image{
   width: 100%;
-  height: 180px;
+  height: 220px;               /* fixed aspect on mobile for consistency */
   object-fit: cover;
-  border-radius: 7px;
-  margin-bottom: 10px;
-}
-.card h3 {
-  margin: 5px 0;
-  font-size: 1.2rem;
+  display: block;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: calc(var(--radius));
+  border-top-right-radius: calc(var(--radius));
 }
 
-.card p {
-  font-size: 0.95rem;
-  margin-top: 10px;
-  opacity: 0.9;
+/* larger image height on bigger screens */
+@media (min-width: 640px){
+  .card .image{ height: 200px; }
 }
-.buttons {
+@media (min-width: 1000px){
+  .card .image{ height: 180px; }
+}
+
+/* price & city row - overlay style */
+.tour-details{
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  padding: 0 1rem;
+  margin-top: 0.25rem;
 }
 
-.card button {
-  margin-top: auto;
-  padding: 8px 15px;
-  border: none;
-  background-color: crimson;
-  color: white;
+.tour-price{
+  margin: 0;
+  font-size: 1rem;
+  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  padding: 0.45rem 0.7rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: var(--fw-medium);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+}
+
+.tour-city{
+  margin: 0;
+  color: #eaf7f2;
+  font-weight: var(--fw-bold);
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+/* description */
+.tour-description{
+  padding: 0 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  min-height: 84px; /* keeps cards even */
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* the paragraph */
+.tour-description p{
+  margin: 0;
+  color: #dbeef0;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+/* read more link */
+.read-more{
+  display: inline-block;
+  margin-top: 0.1rem;
+  color: var(--accent-2);
+  font-weight: var(--fw-medium);
   cursor: pointer;
-  font-size: 0.9rem;
-  transition:all ease 0.2s;
-}
-.not-interested {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.interested {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  user-select: none;
+  transition: color var(--transition), transform var(--transition);
 }
 
-.card button:hover {
-  background-color: rgb(143, 0, 28);
+.read-more:hover{
+  transform: translateY(-2px);
+  text-decoration: underline;
+}
+
+/* Buttons area */
+.buttons{
+  padding: 0 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* General button styles inside card */
+.buttons button{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #fff;
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: var(--fw-medium);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+/* primary negative action */
+.buttons button{
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color: #ffdfe0;
+  border: 1px solid rgba(255,107,107,0.12);
+}
+
+/* hover state */
+.buttons button:hover{
+  transform: translateY(-4px);
+  background: linear-gradient(90deg, rgba(255,107,107,0.12), rgba(0,194,168,0.06));
+  box-shadow: 0 8px 28px rgba(0,0,0,0.5);
+}
+
+/* focus state for accessibility */
+.buttons button:focus{
+  outline: 3px solid rgba(0,194,168,0.12);
+  outline-offset: 3px;
+}
+
+/* smaller screens tweak to prevent overflow */
+@media (max-width: 420px){
+  .tour-description{ min-height: 0; }
+  .card .image{ height: 180px; }
+  .tour-price{ padding: 0.4rem 0.6rem; font-size: 0.95rem; }
+}
+
+/* utility: ensure long descriptions don't break layout */
+.tour-description p{
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* subtle divider (optional) */
+.card::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02), transparent);
 }
