@@ -6,93 +6,67 @@
   background: linear-gradient(180deg, var(--card-bg), rgba(11,17,28,0.8));
   border-radius: var(--radius);
   overflow: hidden;
-  position: relative;
   padding-bottom: 1rem;
-  transition: transform var(--transition), box-shadow var(--transition);
-  box-shadow: 0 12px 30px rgba(3,8,20,0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  outline: 1px solid rgba(255,255,255,0.04);
+  outline-offset: -2px;
+  box-shadow: 0 12px 24px rgba(3,8,20,0.45);
 }
 
-/* Lift on hover */
 .card:hover{
   transform: translateY(-8px);
-  box-shadow: 0 20px 48px rgba(2,8,32,0.7);
+  box-shadow: 1px 1px 10px rgba(87, 91, 104, 0.65);
+}
+
+/* fade-out REMOVE animation */
+.card.removing{
+  opacity: 0;
+  transform: translateY(20px);
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 /* image */
 .card .image{
   width: 100%;
-  height: 220px;               /* fixed aspect on mobile for consistency */
+  height: 220px;
   object-fit: cover;
-  display: block;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: calc(var(--radius));
-  border-top-right-radius: calc(var(--radius));
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
 }
 
-/* larger image height on bigger screens */
-@media (min-width: 640px){
-  .card .image{ height: 200px; }
-}
-@media (min-width: 1000px){
-  .card .image{ height: 180px; }
-}
-
-/* price & city row - overlay style */
+/* info section */
 .tour-details{
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 1rem;
   margin-top: 0.25rem;
 }
 
 .tour-price{
-  margin: 0;
-  font-size: 1rem;
-  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  background: rgba(255,255,255,0.05);
   padding: 0.45rem 0.7rem;
   border-radius: 10px;
-  color: #fff;
   font-weight: var(--fw-medium);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.45);
 }
 
 .tour-city{
-  margin: 0;
-  color: #eaf7f2;
   font-weight: var(--fw-bold);
   font-size: 1.05rem;
-  letter-spacing: -0.01em;
 }
 
-/* description */
+/* description section */
 .tour-description{
   padding: 0 1rem;
   color: var(--muted);
-  font-size: 0.95rem;
-  min-height: 84px; /* keeps cards even */
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
 }
 
-/* the paragraph */
-.tour-description p{
-  margin: 0;
-  color: #dbeef0;
-  line-height: 1.55;
-  white-space: pre-wrap;
-}
-
-/* read more link */
+/* Read More */
 .read-more{
-  display: inline-block;
-  margin-top: 0.1rem;
   color: var(--accent-2);
-  font-weight: var(--fw-medium);
   cursor: pointer;
-  user-select: none;
   transition: color var(--transition), transform var(--transition);
 }
 
@@ -106,61 +80,29 @@
   padding: 0 1rem;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
 }
 
-/* General button styles inside card */
+/* Button base style */
 .buttons button{
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.06);
-  color: #fff;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #ffdfe0;
   padding: 0.55rem 0.85rem;
   border-radius: 10px;
   cursor: pointer;
   font-weight: var(--fw-medium);
-  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
-/* primary negative action */
-.buttons button{
-  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  color: #ffdfe0;
-  border: 1px solid rgba(255,107,107,0.12);
-}
-
-/* hover state */
 .buttons button:hover{
+  background: rgb(151, 21, 21);
+  border-color: rgba(255,107,107,0.5);
+  color: #fff;
   transform: translateY(-4px);
-  background: linear-gradient(90deg, rgba(255,107,107,0.12), rgba(0,194,168,0.06));
-  box-shadow: 0 8px 28px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 5px white;
 }
 
-/* focus state for accessibility */
+/* focus */
 .buttons button:focus{
-  outline: 3px solid rgba(0,194,168,0.12);
+  outline: 3px solid rgba(0,194,168,0.25);
   outline-offset: 3px;
-}
-
-/* smaller screens tweak to prevent overflow */
-@media (max-width: 420px){
-  .tour-description{ min-height: 0; }
-  .card .image{ height: 180px; }
-  .tour-price{ padding: 0.4rem 0.6rem; font-size: 0.95rem; }
-}
-
-/* utility: ensure long descriptions don't break layout */
-.tour-description p{
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
-/* subtle divider (optional) */
-.card::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02), transparent);
 }

@@ -22,9 +22,14 @@ function App() {
   }
 
   return (
-    <div className="main-container">
-      <Tours tours ={tours} RemoveTour= {RemoveTour} />
-    </div>
-  )
+  <div className="main-container">
+      <header className="main-header">
+         <h1>Plan With Us</h1>
+      </header>
+
+      <Tours tours={tours} RemoveTour={RemoveTour} />
+  </div>
+)
+
 }
 export default App
