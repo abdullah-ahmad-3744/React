@@ -7,13 +7,22 @@ function App() {
 
   // Frst variation of useEffect() Hook
   // In this variation code inside the useEffect Hook runs everytime UI is Updated 
-  useEffect( () => {
-    console.log("UI rendering done");
-    
-  })
 
+  // useEffect( () => {
+  //   console.log("UI rendering done");
+    
+  // })
 
   
+
+  // Second variation of the useEffect() Hook
+  // In this variation useEffect() runs only on the first render of the component 
+  useEffect ( () => {
+    console.log("Runs only on the first render");
+    
+  }, [])
+
+
   function ChangeHandler(event) {
     setText(event.target.value)
     console.log(text);
