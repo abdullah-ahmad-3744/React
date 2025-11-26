@@ -14,7 +14,13 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: #ffff;
+}
+.header {
+  border: 3px solid red;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
 }
