@@ -34,17 +34,33 @@ function App() {
     
   // },[text]);
 
+  // useEffect ( () => {
+  //   console.log("Runs on the first render and dependency change");
+  // },[name])
+
+
+
+
+  // Fourth variation of the useEffect() Hook
+  // This is used to for the cleaning purposes , like removing the previous event listener before adding the new one, like unmounting the component before mounting it.
+
   useEffect ( () => {
-    console.log("Runs on the first render and dependency change");
-  },[name])
+    console.log("Listener Added");
+    return () => {
+      console.log("Listener Removed");
+    }
+  }, [text])
 
 
 
-  
   function ChangeHandler(event) {
     setText(event.target.value)
     console.log(text);
   }
+
+
+
+
 
   return (
     <div className="main-container">
