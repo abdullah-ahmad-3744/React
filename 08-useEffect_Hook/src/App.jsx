@@ -4,6 +4,7 @@ import './App.css'
 
 function App() {
   const [text , setText] = useState('')
+  const [name , setName] = useState('')
 
   // Frst variation of useEffect() Hook
   // In this variation code inside the useEffect Hook runs everytime UI is Updated 
@@ -13,16 +14,33 @@ function App() {
     
   // })
 
-  
+
 
   // Second variation of the useEffect() Hook
   // In this variation useEffect() runs only on the first render of the component 
-  useEffect ( () => {
-    console.log("Runs only on the first render");
+
+  // useEffect ( () => {
+  //   console.log("Runs only on the first render");
     
-  }, [])
+  // }, [])
 
 
+
+  // Third variation of useEffect()
+  // In this variation useEffect() runs on the first render + dependency chnages
+
+  // useEffect ( () => {
+  //   console.log("Runs on the first render and dependency change");
+    
+  // },[text]);
+
+  useEffect ( () => {
+    console.log("Runs on the first render and dependency change");
+  },[name])
+
+
+
+  
   function ChangeHandler(event) {
     setText(event.target.value)
     console.log(text);
