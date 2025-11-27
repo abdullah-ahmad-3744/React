@@ -1,23 +1,28 @@
 import "./Cards.css"
-import { apiUrl } from "../data";
-import { useEffect } from "react";
+import Card from '../components/Card'
+function Cards ({courses}) {
+    console.log("Courses Data = ", courses);
 
-function Cards () {
-
-
-    useEffect ( () => {
-        async function fetchedData(params) {
-            const apiResponse = await fetch(apiUrl)
-            const jsonData = await apiResponse.json()
-            console.log("Api Data", jsonData);
-            
-        }
-        fetchedData()
-    },[])
+    const getCourses = () => {
+        let allCourses = []
+        Object.values(courses).forEach ( (courseCategory) => {
+            courseCategory.forEach( (course) => {
+                allCourses.push(course)
+            })
+        })
+        return allCourses
+    }
     
+
+
+
     return (
         <div className="cards-container">
-
+            {
+            getCourses().map( (course) => {
+                return <Card key={course.id} course ={course} />
+            })
+            }
         </div>
     )
 }

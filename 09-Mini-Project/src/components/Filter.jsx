@@ -1,7 +1,5 @@
 import "./Filter.css"
-import { filterData } from "../data";
-
-function Filter () {
+function Filter ({filterData}) {
     
     return (
         <div className="filter-container">
