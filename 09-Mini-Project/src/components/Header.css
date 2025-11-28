@@ -1,10 +1,105 @@
 .header-container {
-  text-align: center;
+  width: 100%;
+  background: linear-gradient(90deg, #0F0F10 0%, #1A1C1F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transition: background 0.3s ease;
 }
 
-.header-container h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 700;
+/* Logo */
+.header-container .logo {
   color: #FFFFFF;
+  font-size: 1.9rem;
+  font-weight: 800;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.header-container .logo-icon {
+  font-size: 2rem;
+  animation: rotateIcon 5s linear infinite;
+}
+
+@keyframes rotateIcon {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Nav Links */
+.nav-links ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  background: #1E90FF;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #1A1C1F;
+    width: 220px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    border-left: 1px solid #2A2C31;
+    border-bottom-left-radius: 10px;
+    padding: 20px 0;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
