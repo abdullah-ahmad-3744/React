@@ -1,0 +1,28 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 260px); /* fixed width for all cards */
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* center the grid container */
+  justify-content: center; /* center cards if fewer than full row */
+  grid-auto-flow: row;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, 200px); /* fixed width for tablets */
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, 180px); /* fixed width for mobile */
+    gap: 15px;
+    justify-content: center;
+  }
+}
