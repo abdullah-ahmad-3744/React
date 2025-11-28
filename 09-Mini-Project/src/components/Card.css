@@ -8,8 +8,7 @@
   gap: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 320px; 
-  min-height: 360px; 
+  min-height: 360px; /* consistent height */
   box-sizing: border-box;
 }
 
@@ -20,7 +19,7 @@
 
 .card-container .image img {
   width: 100%;
-  height: 180px; /* slightly taller image for proportion */
+  height: 180px;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -33,7 +32,7 @@
 
 .card-title h4 {
   color: #FFFFFF;
-  font-size: 1.15rem; /* slightly larger title */
+  font-size: 1.15rem;
   font-weight: 600;
 }
 
@@ -41,5 +40,5 @@
   color: #A9A9A9;
   font-size: 0.95rem;
   line-height: 1.5;
-  flex-grow: 1; /* ensures description pushes bottom spacing equally */
+  flex-grow: 1;
 }
