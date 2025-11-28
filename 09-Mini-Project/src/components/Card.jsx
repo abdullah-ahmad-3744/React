@@ -1,6 +1,17 @@
 import './Card.css'
-// import FcLike from 'react-icons/fc'
+import {FcLike} from 'react-icons/fc'
+import { AiOutlineHeart } from 'react-icons/ai';
+import { useState } from 'react';
+
+
+
+
 function Card ({course}) {
+    const [isLiked, setIsLiked] = useState(false)
+
+    function LikeHandler() {
+        setIsLiked(!isLiked)
+    }
     return (
         <div className="card-container">
 
@@ -9,8 +20,8 @@ function Card ({course}) {
             </div>
 
             <div className="icon">
-                <button>
-                    {/* <FcLike fontSize = "1.75rem"/> */}
+                <button onClick={LikeHandler}>
+                    {isLiked ? (<><FcLike fontSize = "1.75rem"/></>) : (<><AiOutlineHeart fontSize = "1.75rem"/></>)}
                 </button>
             </div>
 
