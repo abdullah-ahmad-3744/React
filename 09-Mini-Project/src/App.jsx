@@ -10,6 +10,8 @@ import Loader from './components/Loader'
 function App() {
   const [courses, setCourses] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [category, setCategory] = useState(filterData[0].title)
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,10 +32,10 @@ function App() {
         <Header />
       </div>
       <div className="filters">
-        <Filter filterData={filterData} />
+        <Filter filterData={filterData} category = {category} setCategory = {setCategory} />
       </div>
       <div className="cards">
-        {loading ? <Loader /> :  <Cards  courses = {courses} /> }
+        {loading ? <Loader /> :  <Cards  courses = {courses}  category = {category}/> }
       </div>
     </div>
   )

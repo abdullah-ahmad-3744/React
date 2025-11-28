@@ -1,11 +1,16 @@
 import "./Filter.css"
-function Filter ({filterData}) {
+function Filter ({filterData, setCategory}) {
+
+    function  filterHandler (title) {
+        setCategory(title)
+    }
+    
     
     return (
         <div className="filter-container">
             {filterData.map ( (data) => {
                 return (
-                    <button key={data.id}>{data.title}</button>
+                    <button key={data.id}  onClick={ () => filterHandler(data.title) }>{data.title}</button>
                 )
             })}
         </div>

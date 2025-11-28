@@ -1,27 +1,30 @@
 import "./Cards.css"
 import Card from '../components/Card'
-function Cards ({courses}) {
-    console.log("Courses Data = ", courses);
+function Cards({ courses, category }) {
+
 
     const getCourses = () => {
-        let allCourses = []
-        Object.values(courses).forEach ( (courseCategory) => {
-            courseCategory.forEach( (course) => {
-                allCourses.push(course)
+        if (category === "All") {
+            let allCourses = []
+            Object.values(courses).forEach((courseCategory) => {
+                courseCategory.forEach((course) => {
+                    allCourses.push(course)
+                })
             })
-        })
-        return allCourses
+            return allCourses
+        }
+        else {
+            return courses[category]
+        }
     }
-    
-
-
-
+    console.log(category)
     return (
         <div className="cards-container">
             {
-            getCourses().map( (course) => {
-                return <Card key={course.id} course ={course} />
-            })
+                getCourses().map((course) => {
+                    console.log("Category = ", category)
+                    return <Card key={course.id} course={course} />
+                })
             }
         </div>
     )
