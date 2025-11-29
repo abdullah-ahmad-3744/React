@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="main-container">
-      <h1>Forms In React </h1>
+      {/* <h1>Forms In React </h1> */}
       <form action="" onSubmit={SubmitHandler}>
         <input type="text" name="firstName" id="" value={formData.firstName} placeholder='First Name :- ' onChange={changHandler} />
         <br />
