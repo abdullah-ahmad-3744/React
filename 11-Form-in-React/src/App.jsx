@@ -5,21 +5,18 @@ import './App.css'
 function App() {
 
   const [formData , setFormData] = useState( 
-    {firstName : '', lastName : '', email : '', textArea : ''}
+    {firstName : '', lastName : '', email : '', textArea : '', isVisible : true}
    )
 
-
+   console.log(formData)
   function changHandler (event) {
+    const {name , value , checked, type} = event.target
     setFormData( (previousFormData) => {
       return {
         ...previousFormData,
-        [event.target.name] :  event.target.value
+        [name] : type === "checkbox" ? checked :  value
       }
     })
-
-    console.log(event.target.value);
-    
-
   }
   // function firstNameChangeHandler (event) {
   //   console.log(event.target.value);
@@ -50,6 +47,12 @@ function App() {
         <br />
 
         <textarea name="textArea" value = {formData.textArea} placeholder="Type A comment" onChange = {changHandler}/>
+
+        <br />
+        <br />
+
+        <input type="checkbox" name='isVisible' id='isVisible'checked={formData.isVisible}  onChange={changHandler}/>
+        <label htmlFor="isVisible">Am I visible ?</label>
       </form>
     </div>
   )
