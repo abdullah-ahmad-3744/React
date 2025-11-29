@@ -14,13 +14,17 @@ function Form() {
                 [name]: type === "checkbox" ? checked : value
             }
         })
-        console.log(formData)
     }
 
+    function SubmitHandler (event) {
+        event.preventDefault()
+        console.log(formData);
+        
+    }
 
     return (
         <div className="form-container">
-            <form action="">
+            <form action="" onSubmit={SubmitHandler}>
 
                 <label htmlFor="firstName">First Name :</label>
                 <input type="text" name="firstName" id="firsttName" value={formData.firstName} onChange={ChangeHandler} />
