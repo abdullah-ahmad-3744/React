@@ -1,0 +1,92 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Single Card Styling */
+.card {
+    width: 470px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    background-color: #1b1c24;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 25px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Profile Image */
+.card .image {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    position: absolute;
+    left: 6%;
+    top: -10%;
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Name */
+.card .name p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+/* Job/Role */
+.card .post p {
+    font-size: 0.8rem;
+    color: #9fa8da;
+    margin-bottom: 3rem;
+
+}
+
+/* Quote Icons */
+.card .left-quote-icon {
+    color: #576070;
+    font-size: 1.5rem;
+}
+
+/* Review Text */
+.card .review-text p {
+    font-size: 0.95rem;
+    color: #d1d1e0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        width: 280px;
+        height: 430px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+        height: auto;
+    }
+}

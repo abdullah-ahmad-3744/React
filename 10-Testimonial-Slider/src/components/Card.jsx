@@ -1,10 +1,11 @@
+import "./Card.css"
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
-function Card ({reviews}) {
+function Card ({review}) {
+    // console.log("Review in Card Component = ", review);
+    
     return (
         <div className="card-container">
-            {reviews.map ( (review) => {
-                return(
                     <div className="card" key={review.id}>
 
 
@@ -31,17 +32,7 @@ function Card ({reviews}) {
                         <div className="left-quote-icon">
                             <FaQuoteRight />
                         </div>
-
-                        <div className="buttons">
-                            <button> " - " </button>
-                            <button>" + "</button>
-                        </div>
-                        <div className="surprise-me">
-                            <button>Surprise Me</button>
-                        </div>
                     </div>
-                )
-            })}
         </div>
     )
 }
