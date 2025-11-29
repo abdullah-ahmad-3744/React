@@ -36,6 +36,7 @@
     position: absolute;
     left: 6%;
     top: -10%;
+    border: 2px solid #021616;
 }
 
 .card .image img {
@@ -56,7 +57,7 @@
 .card .post p {
     font-size: 0.8rem;
     color: #9fa8da;
-    margin-bottom: 3rem;
+    margin-bottom: 1.3rem;
 
 }
 
@@ -71,7 +72,7 @@
     font-size: 0.95rem;
     color: #d1d1e0;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     padding: 0 10px;
     text-align: center;
 }

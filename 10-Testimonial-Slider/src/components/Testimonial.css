@@ -7,17 +7,17 @@
   align-items: center;
   gap: 40px;
 }
-/* Action Buttons "-" and "+" */
+/* Action Buttons */
 .buttons {
     display: flex;
     gap: 15px;
     margin-bottom: 15px;
     position:absolute;
-    bottom: 20%;
+    bottom: 23%;
 }
 
 .buttons button {
-    background-color: #1b1c24;
+    background-color: #350303;
     color: #ffffff;
     font-weight: 700;
     font-size: 1.1rem;
@@ -34,9 +34,9 @@
 /* Surprise Me Button */
 .surprise-me button {
     position: absolute;
-    bottom: 13%;
+    bottom: 16%;
     left: 46%;
-    background-color: #161616;
+    background-color: #350303;
     color: #ffffff;
     font-weight: 700;
     border: none;
