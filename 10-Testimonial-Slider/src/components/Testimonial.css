@@ -1,52 +1,12 @@
 .testimonial-container {
-    width: 100%;
+  width: 100%;
   max-width: 1200px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 40px;
-}
-/* Action Buttons */
-.buttons {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
-    position:absolute;
-    bottom: 23%;
+  padding-bottom: 50px;
 }
 
-.buttons button {
-    background-color: #350303;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 1.1rem;
-    padding: 6px 14px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.buttons button:hover {
-    transform: scale(1.1);
-}
-
-/* Surprise Me Button */
-.surprise-me button {
-    position: absolute;
-    bottom: 16%;
-    left: 46%;
-    background-color: #350303;
-    color: #ffffff;
-    font-weight: 700;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 25px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.surprise-me button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-}
+/* Action Buttons inside cards handled in Card.css */

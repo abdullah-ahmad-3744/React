@@ -2,7 +2,7 @@ import "./Card.css"
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 function Card ({review}) {
-    // console.log("Review in Card Component = ", review);
+    console.log("Review in Card Component = ", review);
     
     return (
         <div className="card-container">
