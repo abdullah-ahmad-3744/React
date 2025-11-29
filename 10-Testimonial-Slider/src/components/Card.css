@@ -83,7 +83,7 @@
   margin-bottom: 15px;
   position: absolute;
   bottom: 21%;
-  left: 43%;
+  left: 45%;
 }
 
 .buttons button {
@@ -105,7 +105,7 @@
 .surprise-me button {
   position: absolute;
   bottom: 12%;
-  left: 41%;
+  left: 43%;
   background-color: rgb(11, 11, 112);
   color: #fffF;
   font-weight: 700;
