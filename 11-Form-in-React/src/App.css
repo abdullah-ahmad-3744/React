@@ -21,9 +21,10 @@ body {
   background: #ffffff0d;
   backdrop-filter: blur(20px);
   border: 1px solid #ffffff25;
-  padding: 30px 50px;
+  padding: 40px 50px;
   border-radius: 20px;
   width: 450px;
+  max-width: 100%;
   color: white;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
   animation: fadeIn 0.6s ease-out;
@@ -32,7 +33,7 @@ body {
 /* ---- Heading ---- */
 .main-container h1 {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -49,7 +50,7 @@ select {
   border: 1px solid #444;
   background: #2e323e;
   color: #fff;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   font-size: 15px;
   transition: 0.3s;
 }
@@ -80,6 +81,7 @@ fieldset {
   border: 1px solid #555;
   padding: 15px;
   border-radius: 12px;
+  margin-bottom: 15px;
 }
 
 legend {
@@ -99,6 +101,7 @@ button {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  margin-top: 15px;
   transition: 0.3s;
 }
 
@@ -117,5 +120,76 @@ button:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/*         RESPONSIVE BREAKPOINTS         */
+
+
+/* Large Tablets / Small Laptops */
+@media (max-width: 1024px) {
+  .main-container {
+    width: 420px;
+    padding: 35px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .main-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .main-container h1 {
+    font-size: 26px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 576px) {
+  .main-container {
+    width: 100%;
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  .main-container h1 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+  .main-container {
+    padding: 20px;
+  }
+
+  .main-container h1 {
+    font-size: 22px;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 10px 12px;
+  }
+
+  button {
+    padding: 11px 0;
   }
 }
