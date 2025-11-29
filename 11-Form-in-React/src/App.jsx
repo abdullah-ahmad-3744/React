@@ -5,7 +5,7 @@ import './App.css'
 function App() {
 
   const [formData , setFormData] = useState( 
-    {firstName : '', lastName : '', email : ''}
+    {firstName : '', lastName : '', email : '', textArea : ''}
    )
 
 
@@ -47,6 +47,9 @@ function App() {
         <br />
         <input type="email" name ="email" value={formData.email} placeholder='Email:- ' onChange={changHandler} />
         <br />
+        <br />
+
+        <textarea name="textArea" value = {formData.textArea} placeholder="Type A comment" onChange = {changHandler}/>
       </form>
     </div>
   )
