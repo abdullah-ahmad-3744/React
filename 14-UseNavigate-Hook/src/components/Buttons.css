@@ -1,3 +1,33 @@
-button {
-    margin-top: 1rem;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 350px;
+  margin: 40px auto;
+}
+
+.buttons button {
+  background: #ffffff;
+  border: 2px solid #cbd1db;
+  padding: 12px 18px;
+  font-size: 1rem;
+  color: #34495e;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover Effect */
+.buttons button:hover {
+  background-color: #cbd1db;
+  color: #2c3e50;
+  transform: translateY(-3px);
+}
+
+/* Optional: Active/Clicked Effect */
+.buttons button:active {
+  transform: scale(0.97);
 }
