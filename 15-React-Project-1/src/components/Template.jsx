@@ -34,7 +34,7 @@ function Template ({title, description1, description2, Image,frame, formType ,se
 
 
                 <div className="singin-with-google">
-                    <button>Sign With Google</button>
+                    <button>Sign In With Google</button>
                 </div>
 
             </div>
