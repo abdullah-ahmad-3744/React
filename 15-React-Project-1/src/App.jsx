@@ -1,11 +1,32 @@
-
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import { useState } from 'react'
+import Header from './components/Header'
+import Home from './pages/Home'
+import SignUp from './pages/SignUp'
+import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
+import ParentRoute from './components/ParentRoute'
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   return (
     <div className="app-container">
-      <h1>Starting a React Project</h1>
+      <Header  isLoggedIn = {isLoggedIn} setIsLoggedIn = {setIsLoggedIn}/>
+
+      <Routes>
+
+        <Route path ='/'           element = {<ParentRoute/>}>
+        <Route index               element = {<Home />}/>
+        <Route path ='/signUp'     element = {<SignUp/>} />
+        <Route path = '/login'     element = {<Login />} />
+        <Route path = 'dashboard'  element = {<Dashboard />}/>
+
+        </Route>
+
+
+      </Routes>
     </div>
   )
 }
