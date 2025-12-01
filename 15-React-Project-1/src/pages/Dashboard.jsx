@@ -2,7 +2,7 @@ import './Dashboard.css'
 function Dashboard () {
     return (
         <div className="dashboard-page-container">
-            <h1>Dashboard Page</h1>
+            <h1>Welcome to StudyNotion</h1>
         </div>
     )
 }

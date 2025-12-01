@@ -1,8 +1,9 @@
 import './SignUp.css'
+import Template from '../components/Template'
 function SignUp() {
     return (
         <div className="signUp-page-container">
-            <h1>SignUp Page</h1>
+            <Template />
         </div>
     )
 }

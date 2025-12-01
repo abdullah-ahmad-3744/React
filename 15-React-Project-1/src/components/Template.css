@@ -1,0 +1,10 @@
+.template-container{
+    display: flex;
+    gap: 20px;
+}
+.left-part {
+    border: 3px solid yellow;
+}
+.right-part {
+    border: 3px solid green;
+}
