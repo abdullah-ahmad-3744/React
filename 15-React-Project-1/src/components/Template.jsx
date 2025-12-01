@@ -1,7 +1,7 @@
 import './Template.css'
 import LoginForm from './LoginForm'
 import SignUpForm from './SignUpForm'
-function Template ({title, description1, description2, Image,frame, formType , isLoggedIn,setIsLoggedIn}) {
+function Template ({title, description1, description2, Image,frame, formType ,setIsLoggedIn}) {
     return (
         // Template for the common elements of the Login and SignUp components
         <div className="template-container">
@@ -21,8 +21,8 @@ function Template ({title, description1, description2, Image,frame, formType , i
 
                 <div className="form-type">
                     {formType === "signUp" ? 
-                    (<SignUpForm/> ) : 
-                    (<LoginForm/>)
+                    (<SignUpForm   setIsLoggedIn={setIsLoggedIn}/> ) : 
+                    (<LoginForm    setIsLoggedIn={setIsLoggedIn}/>)
                 }
                 </div>
 

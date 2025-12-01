@@ -2,7 +2,10 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './LoginForm.css'
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
-function LoginForm () {
+import {toast} from 'react-hot-toast'
+
+
+function LoginForm ({setIsLoggedIn}) {
     const [formData , setFormData] = useState({email : "", password : ''} )
     const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate()
@@ -18,17 +21,22 @@ function LoginForm () {
 
         function PasswordSpanHandler() {
             setShowPassword(!showPassword)
+
         }
 
-        function SignInHandler () {
+        function SubmitHandler (event) {
+            event.preventDefault()
             navigate('/Dashboard')
+            setIsLoggedIn(true)
+            toast.success("Logged In")
         }
     return (
         <div className="login-form-container">
-            <form action="">
+            <form action="" onSubmit={SubmitHandler}>
                 <label htmlFor="email">Email Address <sup>*</sup></label>
                 <input 
-                type="email" 
+                type="email"
+                id='email'
                 required 
                 name='email'
                 value={formData.email}
@@ -57,7 +65,7 @@ function LoginForm () {
 
                 <Link to ='#' > <p>Forget Password</p></Link>
                 <br />
-                <button onClick={SignInHandler}>Sign In</button>
+                <button>Sign In</button>
             </form>
         </div>
     )

@@ -15,7 +15,6 @@ function Header(props) {
 
     function LoginHandler() {
         setIsLoggedIn(!isLoggedIn)
-        toast.success("Logged In")
     }
 
     return (

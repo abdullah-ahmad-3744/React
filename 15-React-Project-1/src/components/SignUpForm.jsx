@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
 import './SignUpForm.css'
+import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 
-function SignUpForm () {
+function SignUpForm ({setIsLoggedIn}) {
     const [singUpFormData, setSignUpFormData] = useState({
         firstName: '', lastName : '', email : '', createPassword : '', confirmPassword : ''
     })
     const [showCreatePassword, setShowCreatePassword] = useState(false)
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false)
     const navigate = useNavigate()
 
 
@@ -20,8 +22,25 @@ function SignUpForm () {
         })
     }
 
-    function PasswordSpanHandler() {
+    function CreatePasswordSpanHandler() {
         setShowCreatePassword(!showCreatePassword)
+    }
+
+    function ConfirmPasswordSpanHandler () {
+        setShowConfirmPassword(!showConfirmPassword)
+    }
+
+    function SubmitHandler (event) {
+        event.preventDefault();
+        if (singUpFormData.createPassword !=singUpFormData.confirmPassword) {
+            toast.error("Password Does Not Match")
+            return
+        }
+        setIsLoggedIn(true)
+        toast.success("Account Created")
+        navigate('/dashboard')
+
+        
     }
     return (
         <div className="sign-up-form-container">
@@ -29,7 +48,7 @@ function SignUpForm () {
                 <button>Student</button>
                 <button>Instructor</button>
             </div>
-            <form action="">
+            <form action="" onSubmit={SubmitHandler}>
                 <div className="name">
                 <label htmlFor=""> <p>First Name <sup>*</sup></p>
                     <input 
@@ -74,13 +93,13 @@ function SignUpForm () {
                         <p>Create Password <sup>*</sup></p>
                         <input 
                         type={showCreatePassword ? ('text') : ('password')}
-                        name='createPassword'
-                        required 
+                        name='createPassword' 
                         value={singUpFormData.createPassword}
+                         required
                         placeholder='Create Password'
                         onChange={ChangeHandler}/>
                     </label>
-                    <span onClick={PasswordSpanHandler}>
+                    <span onClick={CreatePasswordSpanHandler}>
                         {showCreatePassword ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)}
                     </span>
                 </div>
@@ -89,15 +108,15 @@ function SignUpForm () {
                         <p>Confirm Password <sup>*</sup></p>
                     </label>
                     <input 
-                        type={showCreatePassword ? ('text') : ('password')}
+                        type={showConfirmPassword ? ('text') : ('password')}
                         name='confirmPassword'
                         value={singUpFormData.confirmPassword}
                         required
                         placeholder='Confirm Password'
                         onChange={ChangeHandler}
                          />
-                    <span onClick={PasswordSpanHandler}>
-                        {showCreatePassword ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)}
+                    <span onClick={ConfirmPasswordSpanHandler}>
+                        {showConfirmPassword ? (<AiOutlineEyeInvisible/>) : (<AiOutlineEye/>)}
                     </span>
                 </div>
             </div>

@@ -13,15 +13,15 @@ function App() {
 
   return (
     <div className="app-container">
-      <Header  isLoggedIn = {isLoggedIn} setIsLoggedIn = {setIsLoggedIn}/>
+      <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
 
       <Routes>
 
-        <Route path ='/'           element = {<ParentRoute/>}>
-        <Route index               element = {<Home />}/>
-        <Route path ='/signUp'     element = {<SignUp isLoggedIn ={isLoggedIn} setIsLoggedIn = {setIsLoggedIn} />} />
-        <Route path = '/login'     element = {<Login  isLoggedIn ={isLoggedIn} setIsLoggedIn = {setIsLoggedIn} />} />
-        <Route path = 'dashboard'  element = {<Dashboard />}/>
+        <Route path='/' element={<ParentRoute />}>
+          <Route index element={<Home />} />
+          <Route path='/signUp' element={<SignUp isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path='/login' element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path='dashboard' element={<Dashboard />} />
 
         </Route>
 
