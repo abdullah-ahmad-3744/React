@@ -1,11 +1,91 @@
-.template-container{
-    display: flex;
-    gap: 20px;
+.template-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 70px;
+  background-color: #0b0b0c;
+  color: #ffffff;
 }
+
+/* LEFT PART */
 .left-part {
-    border: 3px solid yellow;
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
+.title h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.description span {
+  display: block;
+  font-size: 0.9rem;
+  color: #c8c8c8;
+  line-height: 1.1rem;
+}
+
+/* OR divider */
+.OR-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.OR-text .line {
+  flex: 1;
+  height: 1px;
+  background-color: #2a2a2a;
+}
+
+.OR-text p {
+  color: #9e9e9e;
+  font-size: 0.9rem;
+}
+
+/* Google sign button */
+.singin-with-google button {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid #2f2f2f;
+  color: #cccccc;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.2s ease-in-out;
+}
+
+.singin-with-google button:hover {
+  background-color: #252525;
+  border-color: #3a3a3a;
+}
+
+
+/* RIGHT PART */
 .right-part {
-    display: flex;
-    border: 3px solid green;
+  width:40%;
+  position: relative;
+  display: flex;
+}
+
+.right-part .frame img {
+  position: absolute;
+  top: -10px;     
+  right: 1.8rem;
+  width: 420px;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.right-part .image img {
+  position: relative;
+  width: 420px;
+  border-radius: 7px;
+  z-index: 5;
 }

@@ -6,7 +6,7 @@
   background: rgba(17, 20, 24, 0.7); /* clean dark shade */
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #1F242A;
-  padding: 25px 40px;
+  padding: 16px 40px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -14,7 +14,7 @@
 
 /* ---------- LOGO ---------- */
 .logo img {
-  height: 36px;
+  height: 35px;
   transition: opacity 0.2s ease;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .navigation-menu ul li a {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #A7A7A7;
   transition: 0.25s ease;
@@ -54,7 +54,7 @@
 }
 
 .buttons button {
-  padding: 8px 20px;
+  padding: 7px 20px;
   border-radius: 6px;
   font-size: 15px;
   font-weight: 700;

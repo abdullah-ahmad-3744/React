@@ -5,7 +5,7 @@ import frame from '../assets/frame.png'
 function Login ({IsLoggedIn,setIsLoggedIn}) {
     return (
         <div className="login-container">
-            <Template 
+            <Template className = 'template-wrapper'
             title = "Welcome Back" 
             description1="Build skills for today , tomorrow and beyond." 
             description2="Education for future proof you career." 
