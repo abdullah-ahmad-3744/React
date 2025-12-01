@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
 import './SignUpForm.css'
+import { useNavigate } from 'react-router-dom'
 
 function SignUpForm () {
     const [singUpFormData, setSignUpFormData] = useState({
         firstName: '', lastName : '', email : '', createPassword : '', confirmPassword : ''
     })
     const [showCreatePassword, setShowCreatePassword] = useState(false)
+    const navigate = useNavigate()
 
 
     function ChangeHandler (event) {

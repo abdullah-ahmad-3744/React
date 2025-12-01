@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './LoginForm.css'
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
 function LoginForm () {
     const [formData , setFormData] = useState({email : "", password : ''} )
     const [showPassword, setShowPassword] = useState(false)
+    const navigate = useNavigate()
 
         function ChangeHandler (event) {
             setFormData((previousFormData) => {
@@ -17,6 +18,10 @@ function LoginForm () {
 
         function PasswordSpanHandler() {
             setShowPassword(!showPassword)
+        }
+
+        function SignInHandler () {
+            navigate('/Dashboard')
         }
     return (
         <div className="login-form-container">
@@ -52,7 +57,7 @@ function LoginForm () {
 
                 <Link to ='#' > <p>Forget Password</p></Link>
                 <br />
-                <button>Sign In</button>
+                <button onClick={SignInHandler}>Sign In</button>
             </form>
         </div>
     )
