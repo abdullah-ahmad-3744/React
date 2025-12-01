@@ -21,15 +21,12 @@ function SignUpForm ({setIsLoggedIn}) {
             }
         })
     }
-
     function CreatePasswordSpanHandler() {
         setShowCreatePassword(!showCreatePassword)
     }
-
     function ConfirmPasswordSpanHandler () {
         setShowConfirmPassword(!showConfirmPassword)
     }
-
     function SubmitHandler (event) {
         event.preventDefault();
         if (singUpFormData.createPassword !=singUpFormData.confirmPassword) {
