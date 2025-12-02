@@ -26,8 +26,8 @@ function Header(props) {
             <div className="navigation-menu">
                 <ul>
                     <li> <NavLink to='/'>  Home</NavLink> </li >
-                    <li> <NavLink to='#'>  About</NavLink> </li>
-                    <li> <NavLink to='#'>  Contact</NavLink></li>
+                    <li> <NavLink to='/about'>  About</NavLink> </li>
+                    <li> <NavLink to='/contact'>  Contact</NavLink></li>
                 </ul>
                 <div className="buttons">
 

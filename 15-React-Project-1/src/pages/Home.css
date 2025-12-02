@@ -1,9 +1,133 @@
-.home-page-container {
-    height: 95vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
+/* ---------- HOME CONTAINER ---------- */
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #0e1114;
+  color: #e5e5e5;
+  padding: 40px 80px;
 }
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+  gap: 40px;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 1rem;
+  color: #b5b5b5;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 26px;
+  background: #ffffff;
+  color: #111418;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.25s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: #3f7ec7;
+  color: #ffffff;
+}
+
+
+/* ---------- FEATURES SECTION ---------- */
+/* ---------- SECTION TITLE ---------- */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+/* ---------- CARD GRID ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+/* ---------- GLASS CARD ---------- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  transition: 0.35s ease;
+  cursor: pointer;
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    inset 0 0 25px rgba(255,255,255,0.04);
+}
+
+.glass-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 12px 35px rgba(0, 0, 0, 0.5),
+    inset 0 0 40px rgba(255,255,255,0.08);
+}
+
+/* ---------- ICON ---------- */
+.icon {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.glass-card:hover .icon {
+  transform: scale(1.15) rotate(2deg);
+}
+
+/* ---------- CARD TEXT ---------- */
+.glass-card h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.glass-card p {
+  color: #bfbfbf;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
