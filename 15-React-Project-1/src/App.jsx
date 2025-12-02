@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import ParentRoute from './components/ParentRoute'
+import About from './pages/About'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -19,6 +20,7 @@ function App() {
 
         <Route path='/' element={<ParentRoute />}>
           <Route index element={<Home />} />
+          <Route path='/about' element = {<About/>}/>
           <Route path='/signUp' element={<SignUp isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/login' element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='dashboard' element={<Dashboard />} />
