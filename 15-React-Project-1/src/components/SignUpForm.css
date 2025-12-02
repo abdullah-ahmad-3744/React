@@ -1,5 +1,5 @@
 .sign-up-form-container {
-  margin-top: 10px;
+  margin-top: 7px;
   display: flex;
   flex-direction: column;
   color: #ffffff;
@@ -17,7 +17,6 @@
 .sign-up-form-container .buttons button {
   flex: 1;
   padding: 15px 25px ;
-  border-radius: 6px;
   font-size: 0.95rem;
   background-color: #111113;
   color: #cccccc;
@@ -35,7 +34,6 @@
   color: #e2e2e2;
   font-size: 0.95rem;
   margin-bottom: 5px;
-  /* width: 256px; */
 }
 
 .sign-up-form-container sup {

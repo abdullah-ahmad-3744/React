@@ -1,13 +1,12 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import logo from '../assets/logo.svg'
 import './Header.css'
-import { useState } from "react"
 import toast from "react-hot-toast"
 
 function Header(props) {
     let isLoggedIn = props.isLoggedIn
     let setIsLoggedIn = props.setIsLoggedIn
-
+    const navigate = useNavigate()
     function LogOutHandler () {
         setIsLoggedIn(!isLoggedIn)
         toast.success("Logged Out")

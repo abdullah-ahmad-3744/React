@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   justify-content: space-between;
-  padding: 15px 70px;
+  padding: 5px 70px;
   background-color: #0b0b0c;
   color: #ffffff;
 }
@@ -17,7 +17,7 @@
 }
 
 .title h1 {
-  font-size: 2.1rem;
+  font-size: 1.9rem;
   font-weight: 700;
   color: #ffffff;
 }
