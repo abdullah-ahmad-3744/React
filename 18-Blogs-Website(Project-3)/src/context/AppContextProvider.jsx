@@ -17,8 +17,14 @@ function AppContextProvider({ children }) {
             let apiResponse = await fetch(baseUrl)
             let data = await apiResponse.json()
             console.log(data)
+            setPage(data.page)
+            setPosts(data.posts)
+            setTotalPages(data.totalPages)
         } catch (error) {
-
+            console.log("Error in Fetching Data.....")
+            setPage(1)
+            setPosts([])
+            setTotalPages(null)
         }
     }
     const value = {
