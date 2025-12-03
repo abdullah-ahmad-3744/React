@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
-import App from "../App";
-
+import { baseUrl } from "../baseUrl";
 export const AppContext = createContext()
 
 function AppContextProvider({ children }) {
@@ -9,17 +8,31 @@ function AppContextProvider({ children }) {
     const [page, setPage] = useState(1)
     const [totalPages, setTotalPages] = useState(null)
 
+
+
+    async function fetchData(page = 1) {
+        setLoading(true)
+        let url = `${baseUrl}?page=${page}`
+        try {
+            let apiResponse = await fetch(baseUrl)
+            let data = await apiResponse.json()
+            console.log(data)
+        } catch (error) {
+
+        }
+    }
     const value = {
-        loading, 
+        loading,
         setLoading,
         posts,
         setPosts,
         page,
         setPage,
         totalPages,
-        setTotalPages
+        setTotalPages,
+        fetchData
     }
-    return <AppContext.Provider  value = {value}>
+    return <AppContext.Provider value={value}>
         {children}
     </AppContext.Provider>
 
