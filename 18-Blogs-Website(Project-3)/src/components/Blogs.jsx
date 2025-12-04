@@ -20,7 +20,7 @@ function Blogs () {
 
 
                     <div className="author">
-                        <p>By <span>{post.author}</span>on <span>{post.category}</span></p>
+                        <p>By <span>{post.author}</span> on <span>{post.category}</span></p>
                     </div>
 
 
