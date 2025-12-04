@@ -1,3 +1,4 @@
+import './Pagination.css'
 import { useContext } from "react"
 import { AppContext } from "../context/AppContextProvider"
 
@@ -12,10 +13,10 @@ function Pagination () {
                 {page < totalPages &&
                 (<button  onClick={() => PageChangeHandler (page+1)}>Next</button>)
                 }
-                <div className="text">
+            </div>
+            <div className="text">
                     <p> Page {page}of {totalPages}</p>
                 </div>
-            </div>
         </div>
     )
 }
