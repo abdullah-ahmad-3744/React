@@ -14,7 +14,7 @@ function Blogs () {
             return (
                 <div className="card" key={post.id}>
                     <div className="title">
-                        <p>{post.title}</p>
+                        <h3>{post.title}</h3>
                     </div>
 
 
@@ -33,7 +33,7 @@ function Blogs () {
 
                     <div className="tags">
                         {post.tags.map ( (tag, index) => {
-                            return <span key={index}>{`#${post.tag}`}</span>
+                            return <span key={index}>{`#${tag }`}</span>
                         } )}
                     </div>
                 </div>
