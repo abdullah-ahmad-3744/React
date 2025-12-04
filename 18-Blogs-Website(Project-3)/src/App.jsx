@@ -6,8 +6,8 @@ import Pagination from './components/Pagination'
 import { AppContext } from './context/AppContextProvider'
 
 function App() {
-  const {fetchData} = useContext(AppContext)
-  fetchData()
+  const {fetchBlogsData} = useContext(AppContext)
+  // fetchBlogsData()
   return (
     <div className="main-container">
       <Header />
