@@ -14,9 +14,8 @@ function AppContextProvider({ children }) {
         setLoading(true)
         let url = `${baseUrl}?page=${page}`
         try {
-            let apiResponse = await fetch(baseUrl)
+            let apiResponse = await fetch(url)
             let data = await apiResponse.json()
-            console.log(data)
             setPage(data.page)
             setPosts(data.posts)
             setTotalPages(data.totalPages)
@@ -33,6 +32,7 @@ function AppContextProvider({ children }) {
     function PageChangeHandler (page) {
         setPage(page)
         fetchBlogsData(page)
+        console.log("Page Handler Called")
     }
     const value = {
         loading,
@@ -44,7 +44,7 @@ function AppContextProvider({ children }) {
         totalPages,
         setTotalPages,
         fetchBlogsData,
-        PageChangeHandler
+        PageChangeHandler,
     }
     return <AppContext.Provider value={value}>
         {children}
