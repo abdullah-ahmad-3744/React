@@ -10,7 +10,7 @@ function AppContextProvider({ children }) {
 
 
 
-    async function fetchData(page = 1) {
+    async function fetchBlogsData(page = 1) {
         setLoading(true)
         let url = `${baseUrl}?page=${page}`
         try {
@@ -26,6 +26,13 @@ function AppContextProvider({ children }) {
             setPosts([])
             setTotalPages(null)
         }
+        setLoading(false)
+    }
+
+
+    function PageChangeHandler (page) {
+        setPage(page)
+        fetchBlogsData(page)
     }
     const value = {
         loading,
