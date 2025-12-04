@@ -1,10 +1,30 @@
-.spinner{
+.spinner {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    /* margin-top: 40px; */
+}
+
+.spinner h1 {
+    
+    color: var(--accent);
+    font-size: 1.2rem;
+    animation: fade 1.2s infinite ease-in-out;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
