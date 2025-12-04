@@ -75,4 +75,13 @@
   background: var(--accent);
   color: #fff;
 }
+/* ====== RESPONSIVE ====== */
+@media (max-width: 600px) {
+  .card {
+    padding: 18px;
+  }
 
+  .card .title h3 {
+    font-size: 1.2rem;
+  }
+}
