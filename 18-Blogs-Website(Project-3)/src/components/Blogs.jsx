@@ -1,3 +1,4 @@
+import './Blogs.css'
 import { useContext } from "react"
 import { AppContext } from "../context/AppContextProvider"
 import Spinner from "./Spinner"
