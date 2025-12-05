@@ -1,87 +1,12 @@
 .blogs {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 34px;
 }
 
-/* ====== BLOG CARD ====== */
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  padding: 26px;
-  border-radius: var(--radius);
-  transition: 0.25s ease;
-}
-
-.card:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-}
-
-/* Title */
-.card .title h3 {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-/* Author + Category */
-.card .author p {
-  margin-top: 8px;
-  font-size: 0.92rem;
+/* Empty state */
+.blogs h3 {
+  text-align: center;
   color: var(--text-soft);
-}
-
-.card .author span {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-/* Date */
-.card .date p {
-  margin-top: 6px;
-  color: var(--text-soft);
-  font-size: 0.85rem;
-}
-
-/* Content */
-.card .content p {
-  margin-top: 14px;
-  line-height: 1.55;
-  color: #dfe2e7;
-  font-size: 0.98rem;
-}
-
-/* Tags */
-.card .tags {
-  margin-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.card .tags span {
-  background: #1e2127;
-  color: var(--accent);
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  font-size: 0.82rem;
-  transition: 0.3s ease;
-}
-
-.card .tags span:hover {
-  background: var(--accent);
-  color: #fff;
-}
-/* ====== RESPONSIVE ====== */
-@media (max-width: 600px) {
-  .card {
-    padding: 18px;
-  }
-
-  .card .title h3 {
-    font-size: 1.2rem;
-  }
+  margin-top: 40px;
 }

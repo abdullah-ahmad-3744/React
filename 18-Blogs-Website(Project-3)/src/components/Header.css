@@ -1,10 +1,10 @@
 .header {
   width: 100%;
   padding: 22px 0;
-  text-align: center;
   margin-bottom: 35px;
+  text-align: center;
+  background: rgba(15, 17, 21, 0.85);
   border-bottom: 1px solid var(--border);
-  background: #0f1115ee;
   backdrop-filter: blur(6px);
 }
 
@@ -13,7 +13,7 @@
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--text-main);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 600px) {
