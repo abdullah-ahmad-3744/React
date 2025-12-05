@@ -1,10 +1,13 @@
 
 import './App.css'
-
+import Counter from './componets/Counter'
 function App() {
 
   return (
-    <h1>Starting Redux</h1>
+    <div className="main-container">
+      <h1>Starting Redux</h1>
+    <Counter />
+    </div>
   )
 }
 
