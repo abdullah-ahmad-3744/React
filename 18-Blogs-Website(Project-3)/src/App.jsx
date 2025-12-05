@@ -31,9 +31,9 @@ function App() {
   return (
     <Routes>
       <Route path='/' element= {<Home/>}/>
-      <Route path='/blog:blogId' element= {<Blog/>}/>
-      <Route path='/tag:tagId' element= {<Tag/>}/>
-      <Route path='/categories:category' element= {<Category/>}/>
+      <Route path='/blog/:blogId' element= {<Blog/>}/>
+      <Route path="/tags/:tagId" element={<Tag/>} />
+      <Route path='/categories/:category' element= {<Category/>}/>
     </Routes>
   )
 }
