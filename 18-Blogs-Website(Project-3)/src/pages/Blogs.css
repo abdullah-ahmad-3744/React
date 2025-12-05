@@ -1,0 +1,40 @@
+.blog {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Content Wrapper */
+.blog-content {
+  margin-top: 20px;
+}
+
+/* Back Button */
+.blog-content .button button {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.blog-content .button button:hover {
+  background: var(--accent-hover);
+}
+
+/* Related Blogs */
+.blog-content h2 {
+  margin-top: 40px;
+  color: var(--text-main);
+  font-size: 1.5rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+}
+
+.blog-content p {
+  color: var(--text-soft);
+}

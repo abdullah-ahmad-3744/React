@@ -1,3 +1,4 @@
+import './Tag.css'
 import { useLocation, useNavigate, useNavigation } from "react-router-dom"
 import Header from "../components/Header"
 import Blogs from "../components/Blogs"

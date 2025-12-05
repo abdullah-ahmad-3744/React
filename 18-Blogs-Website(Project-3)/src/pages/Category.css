@@ -1,0 +1,38 @@
+.cateogry {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Top Wrapper */
+.caterogy-page-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Back Button */
+.caterogy-page-content button {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.caterogy-page-content button:hover {
+  background: var(--accent-hover);
+}
+
+/* Heading */
+.caterogy-page-content h2 {
+  margin-top: 18px;
+  font-size: 1.4rem;
+  color: var(--text-main);
+}
+
+.caterogy-page-content span {
+  color: var(--accent);
+}

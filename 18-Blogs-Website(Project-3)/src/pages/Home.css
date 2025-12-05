@@ -1,0 +1,12 @@
+/* Home Page Wrapper */
+.home {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Adjust spacing between components */
+.home > * {
+  margin-bottom: 30px;
+}

@@ -1,3 +1,4 @@
+import './Blogs.css'
 import { useContext, useEffect, useState } from "react"
 import Header from "../components/Header"
 import { useLocation, useNavigate } from "react-router-dom"
@@ -54,7 +55,7 @@ function Blog () {
                     {relatedBlogs.map( (post) => {
                         return(
                             <div key={post.id}>
-                                <BlogDetails post = {blog}/>
+                                <BlogDetails post = {post}/>
                             </div>
                         )
                     })}
