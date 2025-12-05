@@ -3,8 +3,13 @@ import Header from "../components/Header"
 import { useLocation, useNavigate } from "react-router-dom"
 import { AppContext } from "../context/AppContextProvider"
 import { baseUrl } from "../baseUrl"
+import BlogDetails from "../components/BlogDetails"
+
+
+
 
 function Blog () {
+    const newBaseUrl = 'https://codehelp-apis.vercel.app/api/'
     const [blog,setBlog] = useState(null)
     const [relatedBlogs, setRelatedBlogs] = useState([])
     const {loading , setLoading} = useContext(AppContext)
@@ -13,7 +18,7 @@ function Blog () {
     const blogId = location.pathname.split('/').at(-1)
     async function fetchRelatedBlogs() {
         setLoading(true)
-        let url = `${baseUrl}?blogId=${blogId}`
+        let url = `${newBaseUrl}get-blog?blogId=${blogId}`
         try {
             const apiResonse = await fetch(url)
             const data = await apiResonse.json()
