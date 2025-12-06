@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Spinner from "../components/Spinner";
 import Product from "../components/Product";
+import './Home.css';
 
 function Home() {
     const apiUrl = 'https://fakestoreapi.com/products';
@@ -27,17 +28,21 @@ function Home() {
         }, [])
         return (
         <div className="home">
-            {loading ? (<Spinner/>) :
-             posts.length > 0 ? 
-             (<div>
-                {posts.map ((post) => {
-                    return (
-                        <Product key={post.id}  post ={post}/>
-                    )
-                })}
-             </div>) : 
-             (<div> <p>No Post Found</p></div>)}
-        </div>
+  {loading ? (
+    <Spinner />
+  ) : posts.length > 0 ? (
+    <div className="product-grid">
+      {posts.map((post) => (
+        <Product key={post.id} post={post} />
+      ))}
+    </div>
+  ) : (
+    <div className="no-data">
+      <p>No Data Found</p>
+    </div>
+  )}
+</div>
+
     )
 }
 export default Home

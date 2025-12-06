@@ -1,23 +1,36 @@
-import './Navbar.css'
+import './Navbar.css';
 import { NavLink } from "react-router-dom";
-import { IoCart } from "react-icons/io5";
+import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
-function Navbar () {
-    return (
-        <div className="navbar">
-            <div className="logo">
-                <NavLink to='/'><h1>Logo</h1></NavLink>
-            </div>
-            <div className="navigation">
+function Navbar() {
+  const { cart } = useSelector(state => state);
 
-                    <NavLink to='/'><p>Home</p></NavLink>
-                    
-                    <div className="cart">
-                        <NavLink to='/cart'><IoCart/></NavLink>
-                    </div>
-            </div>
+  return (
+    <nav className="navbar">
+      {/* Logo */}
+      <div className="logo">
+        <NavLink to="/">
+          <img src="../logo.png" alt="Logo" />
+        </NavLink>
+      </div>
 
+      {/* Navigation links */}
+      <div className="navigation">
+        <NavLink to="/"><p>Home</p></NavLink>
+
+        {/* Cart icon */}
+        <div className="cart">
+          <NavLink to="/cart">
+            <FaShoppingCart />
+            {cart.length > 0 && (
+              <span className="cart-badge">{cart.length}</span>
+            )}
+          </NavLink>
         </div>
-    )
+      </div>
+    </nav>
+  );
 }
+
 export default Navbar;

@@ -1,6 +1,168 @@
-.product{
-    /* height: 400px;
-    width: 400px; */
-    border: 3px solid red;
-    margin: 10px;
+/* PRODUCT CARD WRAPPER */
+.product {
+  width: 300px;             
+  min-height: 450px;         
+  padding: 20px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.25); 
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Hover Effect */
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* CARD IMAGE */
+.card-image {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;             /* uniform height */
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card-image img:hover {
+  transform: scale(1.05);
+}
+
+/* CARD TITLE */
+.card-title p {
+  font-size: 18px;
+  font-weight: 600;         
+  color: #1f1f1f;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* DESCRIPTION */
+.product .description p {
+  font-size: 14px; 
+  color: #333;
+  text-align: center;
+  margin: 8px 0 12px 0;
+  line-height: 1.5;
+  max-height: 60px;             
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* PRICE */
+.price p {
+  font-size: 17px;
+  font-weight: 700;           
+  color: #17d365;             
+  margin: 10px 0;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: auto;           /* push buttons to bottom */
+}
+
+.buttons button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+  background-color: #d4af37;
+  color: #1f1f1f;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .product {
+    width: 45%;
+    min-height: 420px;
+    padding: 18px;
+  }
+
+  .card-image img {
+    height: 180px;
+  }
+
+  .card-title p {
+    font-size: 18px;
+  }
+
+  .description p {
+    font-size: 13px;
+  }
+
+  .price p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: 90%;
+    min-height: 400px;
+    padding: 16px;
+  }
+
+  .card-image img {
+    height: 160px;
+  }
+
+  .card-title p {
+    font-size: 17px;
+  }
+
+  .description p {
+    font-size: 13px;
+  }
+
+  .price p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .product {
+    width: 100%;
+    min-height: 380px;
+    padding: 14px;
+  }
+
+  .card-image img {
+    height: 150px;
+  }
+
+  .card-title p {
+    font-size: 16px;
+  }
+
+  .description p {
+    font-size: 12px;
+  }
+
+  .price p {
+    font-size: 14px;
+  }
 }

@@ -1,9 +1,14 @@
 /* Global smooth font + premium spacing */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-  margin: 0;
-  padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: 'Inter', 'Helvetica', sans-serif;
-  background-color: #f5f5f5; /* Soft grey for premium feel */
+  background-color: #f5f5f5; 
   color: #1b1b1b;
 }
 
@@ -13,6 +18,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Smooth page transitions */

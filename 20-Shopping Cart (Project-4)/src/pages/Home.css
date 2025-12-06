@@ -1,0 +1,49 @@
+/* Container for the home page */
+.home {
+  height: 100%; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 3px solid red; */
+}
+
+/* Grid container for products */
+.home .product-grid {
+  width: 100%;
+  display: grid;
+}
+
+/* Responsive grid columns */
+@media (min-width: 0px) {
+  .home .product-grid {
+    grid-template-columns: repeat(1, 1fr); /* xs:grid-cols-1 */
+  }
+}
+
+@media (min-width: 640px) {
+  .home .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* sm:grid-cols-2 */
+  }
+}
+
+@media (min-width: 768px) {
+  .home .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .home .product-grid {
+    grid-template-columns: repeat(4, 1fr); /* lg:grid-cols-4 */
+  }
+}
+
+/* Center "No Data Found" message */
+.home .no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}

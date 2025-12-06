@@ -2,6 +2,7 @@ import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../redux/slice/CartSlice";
 import { toast } from "react-toastify";
+import './CartItem.css'
 
 function CartItem({ item }) {
   const dispatch = useDispatch();
