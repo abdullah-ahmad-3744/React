@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="main-container">
-      <h1>Starting Redux</h1>
+      <h1>Counter App </h1>
     <Counter />
     </div>
   )
